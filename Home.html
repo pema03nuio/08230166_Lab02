@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="Home.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section with Slideshow -->
+  <section class="hero">
+    <div class="slideshow">
+      <img src="Screenshot 2025-09-17 194924.png" alt="Hello Image" class="active">
+      <img src="Screenshot 2025-09-17 195459.png" alt="Welcome Image">
+      <img src="Screenshot 2025-09-17 193005.png">
+    </div>
+    <div class="hero-text">
+      <p>
+        This is <strong>Pema Choden</strong>, a Bhutanese student currently pursuing BEd.IT at 
+        Samtse College of Education under Royal University of Bhutan (RUB)...
+      </p>
+      <a href="about.html" class="view-more">View More</a>
+    </div>
+  </section>
+
+  <!-- Motto -->
+  <section class="motto">
+    <h2>Fostering a growth mindset and a love of learning in the digital age.</h2>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Pema Choden | Designed for lab 02</p>
+  </footer>
+
+  <!-- JavaScript for Slideshow -->
+  <script>
+    let slides = document.querySelectorAll(".slideshow img");
+    let index = 0;
+
+    function showSlides() {
+      slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+        if (i === index) {
+          slide.classList.add("active");
+        }
+      });
+      index = (index + 1) % slides.length;
+    }
+
+    setInterval(showSlides, 3000); // change the image in every 2 seconds
+  </script>
+</body>
+</html>
